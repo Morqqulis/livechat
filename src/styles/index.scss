@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+    html,
+    body {
+        @apply h-full bg-slate-800 text-white;
+    }
+
+    main {
+        @apply grow;
+        > * {
+            @apply min-w-0;
+        }
+    }
+}
+
+@layer components {
+    .wrapper {
+        @apply flex min-h-full flex-col;
+    }
+}
+
+@layer utilities {
+    .myInput {
+        @apply w-full rounded-xl border border-slate-600 bg-slate-700 px-3 py-3 text-lg text-slate-100 placeholder:duration-300 focus:outline-none focus:placeholder:text-slate-100/0;
+    }
+    .myflex {
+        @apply flex min-h-screen flex-col items-center justify-center;
+    }
+
+    .container {
+        @apply mx-auto max-w-[1400px] px-[20px];
+    }
+
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    .scrollbar::-webkit-scrollbar {
+        @apply w-2;
+    }
+}

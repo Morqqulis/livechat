@@ -1,0 +1,11 @@
+In Package.json add homepage for deploying project.
+
+// "homepage": "https://{gitname}.github.io/{react-gh-pages}"
+
+
+
+Check uild folder name and fix if needed script: "deploy": "gh-pages -d {dist}"
+then run DEPLOY command.
+// yarn deploy // pnpm deploy
+
+check vite config for {base:}
